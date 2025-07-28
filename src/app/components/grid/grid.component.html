@@ -1,8 +1,5 @@
 
 <section>
-<pre>
-{{valueToFilter()}}
-</pre>
 <app-filter [(filter)]="valueToFilter" [label]="'Filter'" [placeholder]="'Search by name. ex: Juan'"/>
 <div class="mat-elevation-z8">
   <table mat-table  [dataSource]="dataSource" matSort>

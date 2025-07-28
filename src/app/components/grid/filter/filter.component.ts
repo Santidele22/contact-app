@@ -12,7 +12,9 @@ const MATERIAL_MODULES = [MatInputModule, MatFormFieldModule]
   template: `
      <mat-form-field>
         <mat-label>{{label()}}</mat-label>
-        <input matInput [(ngModel)]="filter" [placeholder]="placeholder()">
+        <input matInput
+        [(ngModel)]="filter"
+        [placeholder]="placeholder()">
      </mat-form-field>
   `
   ,

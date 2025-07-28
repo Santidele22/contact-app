@@ -1,4 +1,4 @@
-import { Component, input, signal, viewChild } from '@angular/core';
+import { Component, effect, input, signal, viewChild } from '@angular/core';
 import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatSort, MatSortModule } from '@angular/material/sort';
@@ -35,6 +35,14 @@ export class GridComponent<T> {
   private readonly _paginator = viewChild.required<MatPaginator>(MatPaginator);
 
   valueToFilter = signal('')
+
+  constructor() {
+    effect(() => {
+      if (this.valueToFilter()) {
+        this.dataSource.filter = this.valueToFilter()
+      }
+    }, { allowSignalWrites: true })
+  }
 
   ngOnInit() {
     this.dataSource = new MatTableDataSource(this.data());
