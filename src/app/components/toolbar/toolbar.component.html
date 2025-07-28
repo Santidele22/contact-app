@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="toolbar">
+  <div class="links">
+  <a routerLink="/" mat-button>
+<mat-icon>home</mat-icon>
+    <span>HOME</span>
+  </a>
+  <a routerLink="/contacts" mat-button>
+<mat-icon>contacts</mat-icon>
+    <span>CONTACTS</span>
+  </a>
+  </div>
+  <a  mat-button (click)="openModal()">
+<mat-icon>add</mat-icon>
+    <span>ADD</span>
+  </a>
+</mat-toolbar>
