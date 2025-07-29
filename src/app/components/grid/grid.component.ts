@@ -36,13 +36,17 @@ export class GridComponent<T> {
 
   valueToFilter = signal('')
 
+
   constructor() {
     effect(() => {
       if (this.valueToFilter()) {
         this.dataSource.filter = this.valueToFilter()
+      } else {
+        this.dataSource.filter = ""
       }
     }, { allowSignalWrites: true })
   }
+
 
   ngOnInit() {
     this.dataSource = new MatTableDataSource(this.data());
@@ -51,12 +55,6 @@ export class GridComponent<T> {
     this.dataSource.sort = this._sort();
     this.dataSource.paginator = this._paginator();
   }
-  applyFilter(event: Event): void {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
-  }
+
 
 }
