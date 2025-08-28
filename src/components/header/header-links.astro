@@ -1,0 +1,16 @@
+---
+import { socialMediaLinks } from "@mockups/social-media";
+import { Image } from "astro:assets";
+---
+
+<ul class="social-media-links">
+  {
+    socialMediaLinks.map((link) => (
+      <li>
+        <a href={link.href} target="_blank" rel="noopener noreferrer">
+          <Image src={link.icon} alt={link.text} class="social-media-link" />
+        </a>
+      </li>
+    ))
+  }
+</ul>

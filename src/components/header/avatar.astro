@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+import avatarImage from "@assets/avatar.jpg";
+---
+
+<div class="avatar">
+  <Image src={avatarImage} alt="Avatar" />
+</div>
+<style>
+  .avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar img {
+    width: 100%;
+    height: auto;
+  }
+</style>

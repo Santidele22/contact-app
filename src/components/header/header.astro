@@ -1,0 +1,54 @@
+---
+import Avatar from "./avatar.astro";
+import HeaderTitle from "./header-title.astro";
+import HeaderLinks from "./header-links.astro";
+---
+
+<header class="header-container">
+  <div class="profile">
+    <Avatar />
+    <HeaderTitle
+      title="Santiago Delebecq"
+      subtitle="Desarrollador Web full stack"
+    />
+    <div class="profile-main">
+      <HeaderLinks />
+    </div>
+  </div>
+</header>
+<style is:inline>
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 16px 0;
+    text-align: center;
+    & .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      & .principal-info {
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+      }
+      & .social-media-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 1.5rem;
+        padding: 0;
+        & .social-media-link {
+          width: 26px;
+          height: 26px;
+          transition: transform 0.2s ease;
+        }
+        & .social-media-link:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+</style>
