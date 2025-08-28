@@ -1,10 +1,13 @@
 ---
-import Header from "./header/header.astro";
+import Header from "@components/header/header.astro";
+import Contacts from "@components/contacts.astro";
 ---
 
 <div class="app-container">
   <Header />
-  <main></main>
+  <main>
+    <Contacts />
+  </main>
 </div>
 <style>
   .app-container {

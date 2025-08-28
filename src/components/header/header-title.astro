@@ -6,4 +6,12 @@ const { title, subtitle } = Astro.props;
   <span class="title">{title}</span>
   <span class="subtitle">{subtitle}</span>
 </div>
-<style></style>
+<style>
+  .title {
+    font-size: var(--font-h1);
+    font-weight: bold;
+  }
+  .subtitle {
+    font-size: var(--font-h2);
+  }
+</style>
