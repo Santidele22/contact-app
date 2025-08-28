@@ -1,7 +1,7 @@
-import instagramImage from "@assets/icons/instagram.svg"
-import calendlyImage from "@assets/icons/calendar.svg"
-import githubImage from "@assets/icons/github.svg"
-import linkedinImage from "@assets/icons/linkedin.svg"
+import instagramImage from "@assets/icons/instagram-icon.svg"
+import calendlyImage from "@assets/icons/calendly.svg"
+import githubImage from "@assets/icons/github-icon.svg"
+import linkedinImage from "@assets/icons/linkedin-icon.svg"
 
 
 
