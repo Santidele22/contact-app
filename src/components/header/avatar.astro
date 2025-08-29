@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import avatarImage from "@assets/avatar.jpg";
+import avatarImage from "@assets/logo.webp";
 ---
 
 <div class="avatar">
@@ -15,7 +15,9 @@ import avatarImage from "@assets/avatar.jpg";
   }
 
   .avatar img {
-    width: 100%;
+    min-width: 100%;
     height: auto;
+    object-fit: contain;
+    aspect-ratio: 3:2;
   }
 </style>

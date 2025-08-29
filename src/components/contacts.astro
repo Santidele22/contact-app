@@ -6,13 +6,14 @@ import { sections } from "@mockups/sections";
   {
     sections.map((section) => (
         <h3>{section.title}</h3> 
-      <li class="link-item" style="width: 100%;">
+      <li class="link-item">
         <a href={section.href} target="_blank" rel="noopener noreferrer">
           {section.text}
         </a>
       </li>
     ))
   }
+  <span>📩 santiidele21@gmail.com</span>
 </ul>
 <style>
   .links-list {
@@ -23,15 +24,22 @@ import { sections } from "@mockups/sections";
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
+    z-index: 100;
+    cursor: pointer;
+
+  } 
   .link-item {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    background: rgba(255, 255, 255, 0.05);
+    align-items: center;
+    background: rgba(36, 55, 71, 0.377);
     padding: 1rem;
     border-radius: 6px;
+    transition: .3s all ease;
+    z-index: 1000;
+
+
   }
   .link-item h4 {
     margin: 0 0 0.5rem 0;
@@ -39,11 +47,14 @@ import { sections } from "@mockups/sections";
     color: #fff;
   }
   .link-item a {
-    color: #90cdf4;
     text-decoration: none;
     font-weight: 500;
+    color: inherit;
+    
   }
-  .link-item a:hover {
-    text-decoration: underline;
+  .link-item:hover {
+    background: rgba(36, 55, 71, 0.541);
+
+
   }
 </style>
